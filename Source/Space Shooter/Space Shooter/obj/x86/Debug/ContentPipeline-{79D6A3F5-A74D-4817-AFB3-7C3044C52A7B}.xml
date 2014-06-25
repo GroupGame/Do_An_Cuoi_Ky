@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>asteroid.png</Source>
+      <Name>asteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\asteroid.xnb</Output>
+      <Time>2014-06-23T11:15:08.4439248+07:00</Time>
+    </Item>
+    <Item>
+      <Source>playerbullet.png</Source>
+      <Name>playerbullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\playerbullet.xnb</Output>
+      <Time>2014-06-23T11:15:10.7197319+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ship.png</Source>
+      <Name>ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\ship.xnb</Output>
+      <Time>2014-06-23T11:15:10.9202395+07:00</Time>
+    </Item>
+    <Item>
+      <Source>space.png</Source>
+      <Name>space</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\space.xnb</Output>
+      <Time>2014-06-23T11:15:12.1830587+07:00</Time>
+    </Item>
+    <Item>
+      <Source>1000points.png</Source>
+      <Name>1000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\1000points.xnb</Output>
+      <Time>2014-06-23T11:15:05.321598+07:00</Time>
+    </Item>
+    <Item>
+      <Source>2000points.png</Source>
+      <Name>2000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\2000points.xnb</Output>
+      <Time>2014-06-23T11:15:05.3606094+07:00</Time>
+    </Item>
+    <Item>
+      <Source>5000points.png</Source>
+      <Name>5000points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\5000points.xnb</Output>
+      <Time>2014-06-23T11:15:05.3996012+07:00</Time>
+    </Item>
+    <Item>
+      <Source>500points.png</Source>
+      <Name>500points</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\500points.xnb</Output>
+      <Time>2014-06-23T11:15:05.3125986+07:00</Time>
+    </Item>
+    <Item>
+      <Source>EnemyBullet.png</Source>
+      <Name>EnemyBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\EnemyBullet.xnb</Output>
+      <Time>2014-06-23T11:15:08.5733546+07:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyship.png</Source>
+      <Name>enemyship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\enemyship.xnb</Output>
+      <Time>2014-06-23T11:15:08.6106894+07:00</Time>
+    </Item>
+    <Item>
+      <Source>healthbar.png</Source>
+      <Name>healthbar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\healthbar.xnb</Output>
+      <Time>2014-06-23T11:15:10.3941799+07:00</Time>
+    </Item>
+    <Item>
+      <Source>bgMusicCC.mp3</Source>
+      <Name>bgMusicCC</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.xnb</Output>
+      <Extra>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.wma</Extra>
+      <Time>2014-06-23T11:15:08.5513531+07:00</Time>
+    </Item>
+    <Item>
+      <Source>theme.mp3</Source>
+      <Name>theme</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.xnb</Output>
+      <Extra>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.wma</Extra>
+      <Time>2014-06-23T11:15:12.2400736+07:00</Time>
+    </Item>
+    <Item>
+      <Source>epic1.wav</Source>
+      <Name>epic1</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\epic1.xnb</Output>
+      <Time>2014-06-23T11:15:10.2419224+07:00</Time>
+    </Item>
+    <Item>
+      <Source>explode.wav</Source>
+      <Name>explode</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\explode.xnb</Output>
+      <Time>2014-06-23T11:15:10.2959294+07:00</Time>
+    </Item>
+    <Item>
+      <Source>playershoot.wav</Source>
+      <Name>playershoot</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\playershoot.xnb</Output>
+      <Time>2014-06-23T11:15:10.74494+07:00</Time>
+    </Item>
+    <Item>
+      <Source>georgia.spritefont</Source>
+      <Name>georgia</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\georgia.xnb</Output>
+      <Time>2014-06-23T19:30:33.8805157+07:00</Time>
+    </Item>
+    <Item>
+      <Source>explosion3.png</Source>
+      <Name>explosion3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\explosion3.xnb</Output>
+      <Time>2014-06-24T10:14:12.1633296+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameOver.png</Source>
+      <Name>GameOver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\GameOver.xnb</Output>
+      <Time>2014-06-24T11:09:50.6240199+07:00</Time>
+    </Item>
+    <Item>
+      <Source>MenuBackground.png</Source>
+      <Name>MenuBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\MenuBackground.xnb</Output>
+      <Time>2014-06-24T10:57:23.3583143+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{79D6A3F5-A74D-4817-AFB3-7C3044C52A7B}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space ShooterContent\</RootDirectory>
+      <LoggerRootDirectory>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-02-22T09:53:12.1185757+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
