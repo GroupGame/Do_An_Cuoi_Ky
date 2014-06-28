@@ -31,7 +31,7 @@
   <Class Name="Space_Shooter.Game1" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AASAGUgAAIgMA0EAAQAAAAQAAAAAAAgAAEwgQICAAIQ=</HashCode>
+      <HashCode>AISAWUgAAIgMA0AAAQIAAAQAAAEAAAkAAEwgQICAAIQ=</HashCode>
       <FileName>Game1.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -42,15 +42,8 @@
       <FileName>HUD.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Space_Shooter.Player" Collapsed="true">
-    <Position X="6.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAGDgAAAAAAIAABAAAgAwAgABAAggAAAAw=</HashCode>
-      <FileName>Player.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Space_Shooter.Program" Collapsed="true">
-    <Position X="8.25" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -73,7 +66,7 @@
   <Class Name="Space_Shooter.My2DSprite" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAQAQABQAAEgjEAAEAAEAgAAAKEAAgCAAATKAAABA=</HashCode>
+      <HashCode>AAQAQAAABQAAEgjEAAEAAEAgAAAKEAAgCAAATKAAABA=</HashCode>
       <FileName>My2DSprite.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -103,6 +96,28 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InvisibleGameEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Space_Shooter.Player" Collapsed="true">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAGDgAAAAAAIAABAAAgAwAgABAAggAAAAw=</HashCode>
+      <FileName>Player.cs</FileName>
+      <NewMemberFileName>Player1.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Space_Shooter.Player1">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Space_Shooter.Player2">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Player2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

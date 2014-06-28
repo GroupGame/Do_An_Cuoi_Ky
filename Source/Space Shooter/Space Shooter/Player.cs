@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Space_Shooter
 {
-    class Player
+    public class Player
     {
         public Texture2D texture, bulletTexture, healthTexture;
         public Vector2 position, healthBarPosition;
@@ -48,7 +48,7 @@ namespace Space_Shooter
 
         
         //Update
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             KeyboardState keyState = Keyboard.GetState();
 
@@ -56,29 +56,29 @@ namespace Space_Shooter
             //boudingbox for our player ship
             boundingBox = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
 
-            healthRectangle = new Rectangle((int)healthBarPosition.X, (int)healthBarPosition.Y, health, 25);
+            //healthRectangle = new Rectangle((int)healthBarPosition.X, (int)healthBarPosition.Y, health, 25);
             //fire bullets
-            if (keyState.IsKeyDown(Keys.Space))
-            {
-                Shoot();
-            }
+            //if (keyState.IsKeyDown(Keys.Space))
+            //{
+            //    Shoot();
+            //}
             UpdateBullets();
-            if (keyState.IsKeyDown(Keys.Up))
-            {
-                position.Y = position.Y - speed;
-            }
-            if(keyState.IsKeyDown(Keys.Down))
-            {
-                position.Y = position.Y + speed;
-            }
-            if (keyState.IsKeyDown(Keys.Left))
-            {
-                position.X = position.X - speed;
-            }
-            if (keyState.IsKeyDown(Keys.Right))
-            {
-                position.X = position.X + speed;
-            }
+            //if (keyState.IsKeyDown(Keys.Up))
+            //{
+            //    position.Y = position.Y - speed;
+            //}
+            //if(keyState.IsKeyDown(Keys.Down))
+            //{
+            //    position.Y = position.Y + speed;
+            //}
+            //if (keyState.IsKeyDown(Keys.Left))
+            //{
+            //    position.X = position.X - speed;
+            //}
+            //if (keyState.IsKeyDown(Keys.Right))
+            //{
+            //    position.X = position.X + speed;
+            //}
 
             //keep ship in screen Background
 
@@ -89,10 +89,10 @@ namespace Space_Shooter
         }
 
         //draw
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, position, Color.White);
-            spriteBatch.Draw(healthTexture, healthRectangle, Color.White);
+            //spriteBatch.Draw(healthTexture, healthRectangle, Color.White);
 
             foreach (Bullet b in bulletList)
                 b.Draw(spriteBatch);

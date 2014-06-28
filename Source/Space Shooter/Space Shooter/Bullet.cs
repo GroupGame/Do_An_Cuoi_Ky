@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Space_Shooter
 {
-    class Bullet
+    public class Bullet
     {
         public Rectangle boundingBox;
         public Texture2D texture;

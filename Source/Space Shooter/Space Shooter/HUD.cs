@@ -26,7 +26,15 @@ namespace Space_Shooter
             playerScoreFont = null;
             playerScorePos = new Vector2(screenWidth / 2, 50);
         }
-
+        public HUD(float x, float y)
+        {
+            playerScore = 0;
+            showHud = true;
+            screenHeight = 700;
+            screenWidth = 800;
+            playerScoreFont = null;
+            playerScorePos = new Vector2(x,y);
+        }
         public void LoadContent(ContentManager Content)
         {
             playerScoreFont = Content.Load<SpriteFont>("georgia");

@@ -1,3 +1,2 @@
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Space Shooter\Space Shooter\Space ShooterContent\obj\x86\Debug\Space ShooterContent.contentprojResolveAssemblyReference.cache
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space ShooterContent\obj\x86\Debug\Space ShooterContent.contentprojResolveAssemblyReference.cache
-D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space ShooterContent\obj\x86\Debug\Space ShooterContent.contentprojResolveAssemblyReference.cache
