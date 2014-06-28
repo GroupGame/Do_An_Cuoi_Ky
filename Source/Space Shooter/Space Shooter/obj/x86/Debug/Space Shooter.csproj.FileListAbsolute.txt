@@ -40,3 +40,46 @@ D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shoot
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\Exit.xnb
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\AboutScreen.xnb
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Space Shooter\Space Shooter\Space Shooter\bin\x86\Debug\Content\Back.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\asteroid.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playerbullet.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\ship.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\space.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\1000points.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\2000points.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\5000points.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\500points.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\EnemyBullet.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\enemyship.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\healthbar.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explosion3.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MenuBackground.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\GameOver.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\About.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Help.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MultiPlayer.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\SinglePlayer.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Option.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Exit.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\AboutScreen.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Back.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\epic1.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explode.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playershoot.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\georgia.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.wma
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.wma
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.exe
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.pdb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.csprojResolveAssemblyReference.cache
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.exe
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.pdb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\easy.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\hard.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\HelpScreen.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\normal.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\off.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\on.xnb
+C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\OptionScreen.xnb

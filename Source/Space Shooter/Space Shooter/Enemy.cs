@@ -12,7 +12,7 @@ namespace Space_Shooter
         public Rectangle boundingBox;
         public Texture2D texture, bulletTexture;
         public Vector2 position;
-        public int health, speed, bulletDelay, currentDifficultyLevel;
+        public int health, speed, bulletDelay, currentDifficultyLevel, nBullet;
         public bool isVisible;
         public List<Bullet> bulletList;
 
@@ -24,8 +24,8 @@ namespace Space_Shooter
             health = 5;
             position = newPosition;
             currentDifficultyLevel = 1;
-            bulletDelay = 40;
-            speed = 5;
+            bulletDelay = nBullet;
+            //speed = 5;
             isVisible = true;
 
         }
@@ -97,7 +97,7 @@ namespace Space_Shooter
             }
             if(bulletDelay ==0)
             {
-                bulletDelay = 40;
+                bulletDelay = nBullet;
             }
         }
     }

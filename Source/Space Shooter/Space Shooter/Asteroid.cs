@@ -27,7 +27,7 @@ namespace Space_Shooter
         {
             position = newPosition;
             texture = newTexture;
-            speed = 4;
+            //speed = 4;
             isVisible = true;
             randX = random.Next(0, 750);
             randY = random.Next(-600, -50);

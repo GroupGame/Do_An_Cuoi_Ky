@@ -41,10 +41,18 @@ namespace Space_Shooter
         public Texture2D multiPlayer;
         public Texture2D AboutScreen;
         public Texture2D Help;
+        public Texture2D Option;
+        public Texture2D On_Sound;
+        public Texture2D Off_Sound;
+        public Texture2D easy;
+        public Texture2D normal;
+        public Texture2D hard;
 
         List<My2DSprite> sprites = new List<My2DSprite>();
         List<My2DSprite> btBack = new List<My2DSprite>();
-       
+        List<Texture2D> On_Off_Sound = new List<Texture2D>();
+        List<Texture2D> Level = new List<Texture2D>();
+
         public enum State
         {
             Menu,
@@ -57,8 +65,16 @@ namespace Space_Shooter
             GameOver
         }
 
+        public enum StateLevel
+        {
+            Easy,
+            Normal,
+            Hard
+        }
+
         //set first state
         State gameState = State.Menu;
+        StateLevel stateLevel = StateLevel.Easy;
 
         public Game1()
         {
@@ -96,9 +112,21 @@ namespace Space_Shooter
             menuImage = Content.Load<Texture2D>("MenuBackground");
             singlePlayer = Content.Load<Texture2D>("SinglePlayer");
             multiPlayer = Content.Load<Texture2D>("MultiPlayer");
-            Help = Content.Load<Texture2D>("Help");
+            Help = Content.Load<Texture2D>("HelpScreen");
             AboutScreen = Content.Load<Texture2D>("AboutScreen");
             gameOver = Content.Load<Texture2D>("GameOver");
+
+            Option = Content.Load<Texture2D>("OptionScreen");
+            On_Sound = Content.Load<Texture2D>("On");
+            Off_Sound = Content.Load<Texture2D>("Off");
+            easy = Content.Load<Texture2D>("easy");
+            normal = Content.Load<Texture2D>("normal");
+            hard = Content.Load<Texture2D>("hard");
+            On_Off_Sound.Add(On_Sound);
+            On_Off_Sound.Add(Off_Sound);
+            Level.Add(easy);
+            Level.Add(normal);
+            Level.Add(hard);
 
             CreateMenuButton(260, 150, "SinglePlayer");
             CreateMenuButton(260, 220, "MultiPlayer");
@@ -176,8 +204,10 @@ namespace Space_Shooter
                             gameState = State.Multi;
                             break;
                         case 2:
+                            gameState = State.Option;
                             break;
                         case 3:
+                            gameState = State.Help;
                             break;
                         case 4:
                             gameState = State.About;
@@ -516,6 +546,37 @@ namespace Space_Shooter
                     }
             }
 
+            switch (stateLevel)
+            {
+                case StateLevel.Easy:
+                    foreach (Enemy e in enemyList)
+                    {
+                        e.speed = 5;
+                        e.nBullet = 40;
+                    }
+                    foreach (Asteroid a in asteroidList)
+                        a.speed = 4;
+                    break;
+                case StateLevel.Normal:
+                    foreach (Enemy e in enemyList)
+                    {
+                        e.speed = 10;
+                        e.nBullet = 40;
+                    }
+                    foreach (Asteroid a in asteroidList)
+                        a.speed = 10;
+                    break;
+                case StateLevel.Hard:
+                    foreach (Enemy e in enemyList)
+                    {
+                        e.speed = 15;
+                        e.nBullet = 40;
+                    }
+                    foreach (Asteroid a in asteroidList)
+                        a.speed = 14;
+                    break;
+            }  
+
 
             MouseEventHelper.GetInstance().Update(gameTime);
 
@@ -601,10 +662,51 @@ namespace Space_Shooter
                         hud2.Draw(spriteBatch);
                     break;
                 case State.Option:
+                    Vector2 r_sound = new Vector2();
+                    Vector2 MousePosition = MouseEventHelper.GetInstance().GetMousePosition();
+                    r_sound.X = 300;
+                    r_sound.Y = 280;
+                    spriteBatch.Draw(Option, Vector2.Zero, Color.White);
+                    if (SoundManager.boolSound == true)
+                    {
+                        spriteBatch.Draw(On_Off_Sound[0], r_sound, Color.White);
+                        if (IsSelected(MousePosition, r_sound, On_Off_Sound[0]) && MouseEventHelper.GetInstance().HasLeftButtonDownEvent())
+                            SoundManager.boolSound = false;
+                    }
+                    else if (SoundManager.boolSound == false)
+                    {
+                        spriteBatch.Draw(On_Off_Sound[1], r_sound, Color.White);
+                        if (IsSelected(MousePosition, r_sound, On_Off_Sound[1]) && MouseEventHelper.GetInstance().HasLeftButtonDownEvent())
+                            SoundManager.boolSound = true;
+                    }
+
+                    Vector2 r_level = new Vector2();
+                    r_level.X = 300;
+                    r_level.Y = 330;
+                    if (stateLevel == StateLevel.Easy)
+                    {
+                        spriteBatch.Draw(Level[0], r_level, Color.White);
+                        if (IsSelected(MousePosition, r_level, Level[0]) && MouseEventHelper.GetInstance().HasLeftButtonDownEvent())
+                            stateLevel = StateLevel.Normal;
+                    }
+                    else if (stateLevel == StateLevel.Normal)
+                    {
+                        spriteBatch.Draw(Level[1], r_level, Color.White);
+                        if (IsSelected(MousePosition, r_level, Level[1]) && MouseEventHelper.GetInstance().HasLeftButtonDownEvent())
+                            stateLevel = StateLevel.Hard;
+                    }
+                    else if (stateLevel == StateLevel.Hard)
+                    {
+                        spriteBatch.Draw(Level[2], r_level, Color.White);
+                        if (IsSelected(MousePosition, r_level, Level[2]) && MouseEventHelper.GetInstance().HasLeftButtonDownEvent())
+                            stateLevel = StateLevel.Easy;
+                    }
+
                     for (int i = 0; i < btBack.Count; i++)
                         btBack[i].Draw(gameTime, spriteBatch);
                     break;
                 case State.Help:
+                    spriteBatch.Draw(Help, Vector2.Zero, Color.White);
                     for (int i = 0; i < btBack.Count; i++)
                         btBack[i].Draw(gameTime, spriteBatch);
                     break;
@@ -675,6 +777,14 @@ namespace Space_Shooter
                     i--;
                 }
             }
+        }
+        public bool IsSelected(object obj, Vector2 r, Texture2D textture)
+        {
+            Vector2 pos = (Vector2)obj;
+            if (pos.X >= r.X && pos.X <= r.X + textture.Width &&
+                pos.Y >= r.Y && pos.Y <= r.Y + textture.Height)
+                return true;
+            return false;
         }
     }
 }

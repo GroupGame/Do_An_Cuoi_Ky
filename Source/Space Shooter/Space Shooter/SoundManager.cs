@@ -18,6 +18,8 @@ namespace Space_Shooter
         public SoundEffect explodeSound;
         public Song bgMusic;
 
+        static public bool boolSound = true;
+
         public SoundManager()
         {
             playerShootSound = null;
