@@ -24,8 +24,8 @@ namespace Space_Shooter
         Player p2 = new Player2();
         Starfield sf = new Starfield();
         //Diem player
-        HUD hud = new HUD();
-        HUD hud2 = new HUD(400,100);
+        HUD hud = new HUD(50, 80, 50, 650);
+        HUD hud2 = new HUD(600, 80, 600, 650);
         public int enemyBulletDamage;
         SoundManager sm = new SoundManager();
 
@@ -36,6 +36,8 @@ namespace Space_Shooter
 
         public Texture2D menuImage;
         public Texture2D gameOver;
+
+        public bool twoPlayer = false;
 
         public Texture2D singlePlayer;
         public Texture2D multiPlayer;
@@ -127,16 +129,24 @@ namespace Space_Shooter
             Level.Add(easy);
             Level.Add(normal);
             Level.Add(hard);
-
+            CreateMenu();
+            //CreateMenuButton(260, 150, "SinglePlayer");
+            //CreateMenuButton(260, 220, "MultiPlayer");
+            //CreateMenuButton(260, 290, "Option");
+            //CreateMenuButton(260, 360, "Help");
+            //CreateMenuButton(260, 430, "About");
+            //CreateMenuButton(260, 500, "Exit");
+            CreateButtonBack(650, 620, "Back");
+        }
+        public void CreateMenu()
+        {
             CreateMenuButton(260, 150, "SinglePlayer");
             CreateMenuButton(260, 220, "MultiPlayer");
             CreateMenuButton(260, 290, "Option");
             CreateMenuButton(260, 360, "Help");
             CreateMenuButton(260, 430, "About");
             CreateMenuButton(260, 500, "Exit");
-            CreateButtonBack(650, 620, "Back");
         }
-
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
@@ -199,18 +209,23 @@ namespace Space_Shooter
                     {
                         case 0:
                             gameState = State.Playing;
+                            sprites.Clear();
                             break;
                         case 1:
                             gameState = State.Multi;
+                            sprites.Clear();
                             break;
                         case 2:
                             gameState = State.Option;
+                            sprites.Clear();
                             break;
                         case 3:
                             gameState = State.Help;
+                            sprites.Clear();
                             break;
                         case 4:
                             gameState = State.About;
+                            sprites.Clear();
                             break;
                         case 5:
                             this.Exit();
@@ -229,6 +244,7 @@ namespace Space_Shooter
                     switch (idxb)
                     {
                         case 0:
+                            CreateMenu();
                             gameState = State.Menu;
                             break;
                     }
@@ -265,7 +281,8 @@ namespace Space_Shooter
             {
                 case State.Playing:
                     {
-                        sf.speed = 5;
+                        sf.speed = 2;
+                        #region Player
                         //updating enemy's and checking collision of enemyship to player ship
                         foreach (Enemy e in enemyList)
                         {
@@ -314,7 +331,8 @@ namespace Space_Shooter
                             //check to see if any of the asteroid are collingding with our playership, if they are... set issvisible to flase(remove them from asretorid list)
                             if (a.boundingBox.Intersects(p.boundingBox))
                             {
-                                sm.explodeSound.Play();                                
+                                sm.explodeSound.Play();
+                                explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(a.position.X, a.position.Y)));
                                 p.health -= 20;
                                 a.isVisible = false;
 
@@ -339,14 +357,23 @@ namespace Space_Shooter
                         //hud.Update(gameTime);
 
                         // if health <=0 go to game over
-                        if (p.health <= 0)
-                            gameState = State.GameOver;
+                        hud.playerLive = p.live;
+
 
                         p.Update(gameTime);
                         sf.Update(gameTime);
                         ManageExposion();
                         LoadAsteroids();
                         LoadEnemies();
+                        if (p.health <= 0)
+                        {
+                            p.live = p.live - 1;
+
+                            if (p.health <= 0 && p.live <= 0)
+                                gameState = State.GameOver;
+                            p.health = 200;
+                        }
+                        #endregion
                         break;
                     }
                 case State.Menu:
@@ -366,8 +393,8 @@ namespace Space_Shooter
                 case State.Single:
                     break;
                 case State.Multi:
-                    sf.speed = 5;
-                    //player 1
+                        sf.speed = 2;
+                        #region player 1
                         //updating enemy's and checking collision of enemyship to player ship
                         foreach (Enemy e in enemyList)
                         {
@@ -437,8 +464,10 @@ namespace Space_Shooter
 
                             a.Update(gameTime);
                         }
-                    //player 2
-                    foreach (Enemy e in enemyList)
+                    #endregion
+
+                        #region player 2
+                        foreach (Enemy e in enemyList)
                         {
                             //check if enemyship is colliding with player
                             if (e.boundingBox.Intersects(p2.boundingBox))
@@ -506,12 +535,13 @@ namespace Space_Shooter
 
                             a.Update(gameTime);
                         }
-
+                        #endregion
                         //hud.Update(gameTime);
 
                         // if health <=0 go to game over
-                        if (p.health <= 0 && p2.health<=0)
-                            gameState = State.GameOver;
+                        hud.playerLive = p.live;
+                        hud2.playerLive = p2.live;
+
 
                         p.Update(gameTime);
                         p2.Update(gameTime);
@@ -519,9 +549,29 @@ namespace Space_Shooter
                         ManageExposion();
                         LoadAsteroids();
                         LoadEnemies();
+                        if (p.health <= 0)
+                        {
+                            if (p.live > 0)
+                                p.live = p.live - 1;
+                                
+                            if(p.live>0)
+                            p.health = 200;
+                        }
+                        if (p2.health <= 0)
+                        {
+                            if (p2.live > 0)
+                                p2.live = p2.live - 1;
+                                
+                            if(p2.live>0)
+                            p2.health = 200;
+                            
+                        }
 
+                        if (p.health <= 0 && p2.health <= 0 && p.live <= 0 && p2.live <= 0)
+                            gameState = State.GameOver;
                     break;
                 case State.Option:
+
                     break;
                 case State.Help:
                     break;
@@ -539,9 +589,14 @@ namespace Space_Shooter
                             enemyList.Clear();
                             asteroidList.Clear();
                             p.health = 200;
+                            p2.health = 200;
                             hud.playerScore = 0;
+                            hud2.playerScore = 0;
+                            p.live = 3;
+                            p2.live = 3;
                         }
-                        
+                        if(sprites.Count==0)
+                            CreateMenu();
                         break;
                     }
             }
@@ -637,9 +692,9 @@ namespace Space_Shooter
                     break;
                 case State.Multi:
                     sf.Draw(spriteBatch);
-                    if(p.health >= 0)
+                    if(p.health > 0 && p.live >0)
                         p.Draw(spriteBatch);
-                    if(p2.health >=0 )
+                    if(p2.health >0 && p2.live >0)
                         p2.Draw(spriteBatch);
                         foreach (Explosion ex in explosionList)
                         {

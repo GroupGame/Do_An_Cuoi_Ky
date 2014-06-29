@@ -83,3 +83,90 @@ C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x8
 C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\off.xnb
 C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\on.xnb
 C:\Users\HanhTan\Desktop\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\OptionScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.exe
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.pdb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\asteroid.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playerbullet.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\ship.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\space.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\1000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\2000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\5000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\500points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\EnemyBullet.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\enemyship.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\healthbar.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explosion3.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MenuBackground.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\GameOver.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\About.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Help.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MultiPlayer.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\SinglePlayer.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Option.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Exit.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\AboutScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Back.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\easy.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\hard.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\HelpScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\normal.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\off.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\on.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\OptionScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\epic1.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explode.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playershoot.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\georgia.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.wma
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.wma
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.exe
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.pdb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.csprojResolveAssemblyReference.cache
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\Git\Do_An_Cuoi_Ky\Source\Space Shooter\Space Shooter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\asteroid.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playerbullet.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\ship.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\space.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\1000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\2000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\5000points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\500points.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\EnemyBullet.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\enemyship.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\healthbar.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explosion3.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MenuBackground.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\GameOver.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\About.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Help.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\MultiPlayer.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\SinglePlayer.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Option.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Exit.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\AboutScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\Back.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\easy.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\hard.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\HelpScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\normal.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\off.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\on.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\OptionScreen.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\epic1.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\explode.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\playershoot.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\georgia.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\bgMusicCC.wma
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\theme.wma
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.exe
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Space Shooter.pdb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.csprojResolveAssemblyReference.cache
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.exe
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.pdb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\starship.xnb

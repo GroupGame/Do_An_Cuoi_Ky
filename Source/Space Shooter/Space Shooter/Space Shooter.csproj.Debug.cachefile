@@ -20,12 +20,6 @@ Content\Option.xnb
 Content\Exit.xnb
 Content\AboutScreen.xnb
 Content\Back.xnb
-Content\bgMusicCC.xnb
-Content\theme.xnb
-Content\epic1.xnb
-Content\explode.xnb
-Content\playershoot.xnb
-Content\georgia.xnb
 Content\easy.xnb
 Content\hard.xnb
 Content\HelpScreen.xnb
@@ -33,5 +27,12 @@ Content\normal.xnb
 Content\off.xnb
 Content\on.xnb
 Content\OptionScreen.xnb
+Content\bgMusicCC.xnb
+Content\theme.xnb
+Content\epic1.xnb
+Content\explode.xnb
+Content\playershoot.xnb
+Content\georgia.xnb
+Content\starship.xnb
 Content\bgMusicCC.wma
 Content\theme.wma

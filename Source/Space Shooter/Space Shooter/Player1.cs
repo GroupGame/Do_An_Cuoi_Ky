@@ -10,7 +10,7 @@ namespace Space_Shooter
 {
     public class Player1 : Player
     {
-         public Player1()
+        public Player1()
         {
             bulletList = new List<Bullet>();
             texture = null;
@@ -19,13 +19,13 @@ namespace Space_Shooter
             speed = 10;
             isCollinding = false;
             health = 200;
-            healthBarPosition = new Vector2(50,50);
-            
+            healthBarPosition = new Vector2(50, 50);
+
         }
 
         public override void Update(GameTime gameTime)
         {
-            
+
             KeyboardState keyState = Keyboard.GetState();
 
             healthRectangle = new Rectangle((int)healthBarPosition.X, (int)healthBarPosition.Y, health, 25);
@@ -56,7 +56,6 @@ namespace Space_Shooter
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(healthTexture, healthRectangle, Color.White);
-
             base.Draw(spriteBatch);
         }
     }

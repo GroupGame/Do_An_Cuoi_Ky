@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -10,7 +11,7 @@ namespace Space_Shooter
 {
     public class Player2 : Player
     {
-         public Player2()
+        public Player2()
         {
             bulletList = new List<Bullet>();
             texture = null;
@@ -19,8 +20,15 @@ namespace Space_Shooter
             speed = 10;
             isCollinding = false;
             health = 200;
-            healthBarPosition = new Vector2(50,100);
-            
+            healthBarPosition = new Vector2(800 - health, 50);
+
+        }
+        public override void LoadContent(ContentManager Content)
+        {
+            texture = Content.Load<Texture2D>("starship");
+            bulletTexture = Content.Load<Texture2D>("playerbullet");
+            healthTexture = Content.Load<Texture2D>("healthbar");
+            sm.LoadContent(Content);
         }
 
         public override void Update(GameTime gameTime)
@@ -28,7 +36,7 @@ namespace Space_Shooter
             KeyboardState keyState = Keyboard.GetState();
 
             healthRectangle = new Rectangle((int)healthBarPosition.X, (int)healthBarPosition.Y, health, 25);
-
+            //healthRectangle = new Rectangle()
 
             if (keyState.IsKeyDown(Keys.P))
             {

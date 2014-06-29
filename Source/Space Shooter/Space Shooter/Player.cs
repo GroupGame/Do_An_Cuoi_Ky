@@ -14,12 +14,13 @@ namespace Space_Shooter
         public Texture2D texture, bulletTexture, healthTexture;
         public Vector2 position, healthBarPosition;
         public int speed, health;
+        public int live;
 
         public float bulletDelay;
         //collision Variables
         public Rectangle boundingBox, healthRectangle;
         public bool isCollinding;
-        SoundManager sm = new SoundManager();
+        public SoundManager sm = new SoundManager();
 
 
         public List<Bullet> bulletList;
@@ -33,12 +34,13 @@ namespace Space_Shooter
             speed = 10;
             isCollinding = false;
             health = 200;
-            healthBarPosition = new Vector2(50,50);
-            
+            live = 3;
+            healthBarPosition = new Vector2(50, 50);
+
         }
-        
+
         //Load content
-        public void LoadContent(ContentManager Content)
+        public virtual void LoadContent(ContentManager Content)
         {
             texture = Content.Load<Texture2D>("ship");
             bulletTexture = Content.Load<Texture2D>("playerbullet");
@@ -46,7 +48,7 @@ namespace Space_Shooter
             sm.LoadContent(Content);
         }
 
-        
+
         //Update
         public virtual void Update(GameTime gameTime)
         {
@@ -83,9 +85,9 @@ namespace Space_Shooter
             //keep ship in screen Background
 
             if (position.X <= 0) position.X = 0;
-            if (position.X >= 800-texture.Width) position.X = 800-texture.Width;
+            if (position.X >= 800 - texture.Width) position.X = 800 - texture.Width;
             if (position.Y <= 0) position.Y = 0;
-            if (position.Y >= 700-texture.Height) position.Y = 700-texture.Height;
+            if (position.Y >= 700 - texture.Height) position.Y = 700 - texture.Height;
         }
 
         //draw
@@ -105,7 +107,7 @@ namespace Space_Shooter
             if (bulletDelay >= 0)
                 bulletDelay--;
             //if bullet delay is at 0; create new bullet at player position, make it visible on the screen, then add that bullet to the List
-            if(bulletDelay <=0)
+            if (bulletDelay <= 0)
             {
                 sm.playerShootSound.Play();
                 Bullet newBullet = new Bullet(bulletTexture);
@@ -140,7 +142,7 @@ namespace Space_Shooter
 
             }
             //iterate throught bullList and see if any of the bullets are not visible, if they arent then bullet from our bullet list
-            for(int i=0; i< bulletList.Count; i++)
+            for (int i = 0; i < bulletList.Count; i++)
             {
                 if (!bulletList[i].isVisible)
                 {

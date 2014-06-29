@@ -12,9 +12,9 @@ namespace Space_Shooter
 {
     public class HUD
     {
-        public int playerScore, screenWidth, screenHeight;
+        public int playerScore, screenWidth, screenHeight, playerLive;
         public SpriteFont playerScoreFont;
-        public Vector2 playerScorePos;
+        public Vector2 playerScorePos, playerLivePos;
         public bool showHud;
 
         public HUD()
@@ -26,14 +26,15 @@ namespace Space_Shooter
             playerScoreFont = null;
             playerScorePos = new Vector2(screenWidth / 2, 50);
         }
-        public HUD(float x, float y)
+        public HUD(float x, float y, float xlive, float ylive)
         {
             playerScore = 0;
             showHud = true;
             screenHeight = 700;
             screenWidth = 800;
             playerScoreFont = null;
-            playerScorePos = new Vector2(x,y);
+            playerScorePos = new Vector2(x, y);
+            playerLivePos = new Vector2(xlive, ylive);
         }
         public void LoadContent(ContentManager Content)
         {
@@ -51,7 +52,11 @@ namespace Space_Shooter
         {
             //if we are showing our Hud(if showhud = true) then display our hud
             if (showHud)
+            {
                 spriteBatch.DrawString(playerScoreFont, "Score: " + playerScore, playerScorePos, Color.Red);
+                spriteBatch.DrawString(playerScoreFont, "Live: " + playerLive, playerLivePos, Color.Red);
+            }
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Space_Shooter
 
         public Enemy(Texture2D newTexture, Vector2 newPosition, Texture2D newBulletText)
         {
+            nBullet = 5;
             bulletList = new List<Bullet>();
             texture = newTexture;
             bulletTexture = newBulletText;
@@ -25,7 +26,7 @@ namespace Space_Shooter
             position = newPosition;
             currentDifficultyLevel = 1;
             bulletDelay = nBullet;
-            //speed = 5;
+            speed = 5;
             isVisible = true;
 
         }
