@@ -327,6 +327,15 @@
       <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\starship.xnb</Output>
       <Time>2014-06-29T09:23:06.7726751+07:00</Time>
     </Item>
+    <Item>
+      <Source>weapon2.png</Source>
+      <Name>weapon2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\weapon2.xnb</Output>
+      <Time>2014-06-29T17:33:18.0449215+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{79D6A3F5-A74D-4817-AFB3-7C3044C52A7B}</ContentProjectGUID>

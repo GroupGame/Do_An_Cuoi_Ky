@@ -14,7 +14,7 @@ namespace Space_Shooter
         public Texture2D texture, bulletTexture, healthTexture;
         public Vector2 position, healthBarPosition;
         public int speed, health;
-        public int live;
+        public int live, level, score;
 
         public float bulletDelay;
         //collision Variables
@@ -36,6 +36,8 @@ namespace Space_Shooter
             health = 200;
             live = 3;
             healthBarPosition = new Vector2(50, 50);
+            score =0;
+            level =0;
 
         }
 
@@ -65,6 +67,7 @@ namespace Space_Shooter
             //    Shoot();
             //}
             UpdateBullets();
+            UpLevel();
             //if (keyState.IsKeyDown(Keys.Up))
             //{
             //    position.Y = position.Y - speed;
@@ -151,5 +154,18 @@ namespace Space_Shooter
                 }
             }
         }
+
+        public void UpLevel()
+        {
+            if(score >= 200)
+                level =1;
+            if(score >= 500)
+                level =2;
+            if (score >= 1000)
+                level = 3;
+            if (score >= 1600)
+                level = 4;
+        }
+
     }
 }

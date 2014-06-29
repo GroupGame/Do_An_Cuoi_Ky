@@ -26,7 +26,7 @@ namespace Space_Shooter
         public override void LoadContent(ContentManager Content)
         {
             texture = Content.Load<Texture2D>("starship");
-            bulletTexture = Content.Load<Texture2D>("playerbullet");
+            bulletTexture = Content.Load<Texture2D>("weapon2");
             healthTexture = Content.Load<Texture2D>("healthbar");
             sm.LoadContent(Content);
         }
@@ -37,6 +37,13 @@ namespace Space_Shooter
 
             healthRectangle = new Rectangle((int)healthBarPosition.X, (int)healthBarPosition.Y, health, 25);
             //healthRectangle = new Rectangle()
+            Vector2 MousePosition = MouseEventHelper.GetInstance().GetMousePosition();
+            position.X = MousePosition.X;
+            position.Y = MousePosition.Y;
+            if (MouseEventHelper.GetInstance().IsLeftButtonDown() && Global.twoPlayer ==true)
+            {
+                Shoot();
+            }
 
             if (keyState.IsKeyDown(Keys.P))
             {
@@ -58,6 +65,8 @@ namespace Space_Shooter
             {
                 position.X = position.X + speed;
             }
+            MouseEventHelper.GetInstance().Update(gameTime);
+
             base.Update(gameTime);
         }
         public override void Draw(SpriteBatch spriteBatch)

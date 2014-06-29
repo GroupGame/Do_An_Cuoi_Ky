@@ -12,9 +12,9 @@ namespace Space_Shooter
 {
     public class HUD
     {
-        public int playerScore, screenWidth, screenHeight, playerLive;
+        public int playerScore, screenWidth, screenHeight, playerLive, playerLevel;
         public SpriteFont playerScoreFont;
-        public Vector2 playerScorePos, playerLivePos;
+        public Vector2 playerScorePos, playerLivePos, levelPos;
         public bool showHud;
 
         public HUD()
@@ -25,6 +25,8 @@ namespace Space_Shooter
             screenWidth = 800;
             playerScoreFont = null;
             playerScorePos = new Vector2(screenWidth / 2, 50);
+            levelPos.X = playerLivePos.X;
+            levelPos.Y = playerLivePos.Y - 40;
         }
         public HUD(float x, float y, float xlive, float ylive)
         {
@@ -35,6 +37,8 @@ namespace Space_Shooter
             playerScoreFont = null;
             playerScorePos = new Vector2(x, y);
             playerLivePos = new Vector2(xlive, ylive);
+            levelPos.X = playerLivePos.X;
+            levelPos.Y = playerLivePos.Y - 40;
         }
         public void LoadContent(ContentManager Content)
         {
@@ -55,6 +59,7 @@ namespace Space_Shooter
             {
                 spriteBatch.DrawString(playerScoreFont, "Score: " + playerScore, playerScorePos, Color.Red);
                 spriteBatch.DrawString(playerScoreFont, "Live: " + playerLive, playerLivePos, Color.Red);
+                spriteBatch.DrawString(playerScoreFont, "Level : " + playerLevel, levelPos, Color.Red);
             }
 
         }

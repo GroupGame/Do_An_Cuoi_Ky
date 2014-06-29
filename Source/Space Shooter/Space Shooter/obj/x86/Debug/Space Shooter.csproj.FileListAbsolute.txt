@@ -170,3 +170,4 @@ D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Spac
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.exe
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\obj\x86\Debug\Space Shooter.pdb
 D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\starship.xnb
+D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\weapon2.xnb
