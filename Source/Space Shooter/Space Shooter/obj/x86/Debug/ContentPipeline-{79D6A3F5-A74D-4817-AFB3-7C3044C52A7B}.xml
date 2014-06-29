@@ -336,6 +336,24 @@
       <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\weapon2.xnb</Output>
       <Time>2014-06-29T17:33:18.0449215+07:00</Time>
     </Item>
+    <Item>
+      <Source>red_heart.png</Source>
+      <Name>red_heart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\red_heart.xnb</Output>
+      <Time>2014-06-29T21:15:38.4549871+07:00</Time>
+    </Item>
+    <Item>
+      <Source>torpedo.png</Source>
+      <Name>torpedo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\torpedo.xnb</Output>
+      <Time>2014-06-29T22:03:58.0025793+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{79D6A3F5-A74D-4817-AFB3-7C3044C52A7B}</ContentProjectGUID>

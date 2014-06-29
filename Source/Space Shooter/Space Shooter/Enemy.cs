@@ -26,7 +26,7 @@ namespace Space_Shooter
             position = newPosition;
             currentDifficultyLevel = 1;
             bulletDelay = nBullet;
-            speed = 5;
+            speed = Global.speedOfEnemy;
             isVisible = true;
 
         }

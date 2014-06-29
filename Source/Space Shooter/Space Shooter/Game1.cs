@@ -30,6 +30,7 @@ namespace Space_Shooter
         SoundManager sm = new SoundManager();
 
         List<Asteroid> asteroidList = new List<Asteroid>();
+        List<Emergency> emergencyList = new List<Emergency>();
         List<Explosion> explosionList = new List<Explosion>();
         List<Enemy> enemyList = new List<Enemy>();
         List<Enemy> enemyList2 = new List<Enemy>();
@@ -176,7 +177,6 @@ namespace Space_Shooter
                 }
             return idx;
         }
-
         private int GetSelectedButtonBack(Vector2 WorldPosition)
         {
             int idx = -1;
@@ -339,7 +339,22 @@ namespace Space_Shooter
                             }
                             e.Update(gameTime);
                         }
-                        
+
+                        foreach (Emergency em in emergencyList)
+                        {
+                            if (em.boundingBox.Intersects(p.boundingBox))
+                            {
+                                sm.explodeSound.Play();
+                                if (p.health <= (200 - 20))
+                                    p.health += 20;
+                                em.isVisible = false;
+
+                            }
+
+                            // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
+                            em.Update(gameTime);
+                        }
+
                         foreach (Explosion ex in explosionList)
                         {
                             ex.Update(gameTime);
@@ -376,13 +391,18 @@ namespace Space_Shooter
                         //hud.Update(gameTime);
 
                         // if health <=0 go to game over
+
+                        Global.levelOfPlayer1 = p.level;
                         hud.playerLive = p.live;
                         hud.playerScore = p.score;
                         hud.playerLevel = p.level;
                         p.Update(gameTime);
                         sf.Update(gameTime);
                         ManageExposion();
+
                         LoadAsteroids();
+                        LoadEmergency();
+
                         LoadEnemies();
                         if (p.health <= 0)
                         {
@@ -483,6 +503,27 @@ namespace Space_Shooter
                             e.Update(gameTime);
                         }
 
+                        foreach (Emergency em in emergencyList)
+                        {
+                            if (em.boundingBox.Intersects(p.boundingBox))
+                            {
+                                sm.explodeSound.Play();
+                                if (p.health <= (200 - 20))
+                                    p.health += 20;
+                                em.isVisible = false;
+
+                            }
+                            if (em.boundingBox.Intersects(p2.boundingBox))
+                            {
+                                sm.explodeSound.Play();
+                                if (p2.health <= (200 - 20))
+                                    p2.health += 20;
+                                em.isVisible = false;
+
+                            }
+                            // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
+                            em.Update(gameTime);
+                        }
                         foreach (Explosion ex in explosionList)
                         {
                             ex.Update(gameTime);
@@ -551,11 +592,17 @@ namespace Space_Shooter
                         hud2.playerScore = p2.score;
                         hud2.playerLevel = p2.level;
 
+                        Global.levelOfPlayer1 = p.level;
+                        Global.levelOfPlayer2 = p2.level;
+
+
                         p.Update(gameTime);
                         p2.Update(gameTime);
                         sf.Update(gameTime);
                         ManageExposion();
                         LoadAsteroids();
+                        LoadEmergency();
+
                         LoadEnemies();
                         if (p.health <= 0)
                         {
@@ -647,7 +694,7 @@ namespace Space_Shooter
 
 
             MouseEventHelper.GetInstance().Update(gameTime);
-
+            UpdateManChoi();
             base.Update(gameTime);
             for (int i = 0; i < sprites.Count; i++)
                 sprites[i].Update(gameTime);
@@ -688,7 +735,10 @@ namespace Space_Shooter
                     {
                         a.Draw(spriteBatch);
                     }
-
+                    foreach (Emergency em in emergencyList)
+                    {
+                        em.Draw(spriteBatch);
+                    }
                     foreach (Enemy e in enemyList)
                     {
                         e.Draw(spriteBatch);
@@ -716,7 +766,10 @@ namespace Space_Shooter
                     {
                         a.Draw(spriteBatch);
                     }
-
+                    foreach (Emergency em in emergencyList)
+                    {
+                        em.Draw(spriteBatch);
+                    }
                     foreach (Enemy e in enemyList)
                     {
                         e.Draw(spriteBatch);
@@ -801,7 +854,7 @@ namespace Space_Shooter
         {
             int randY = random.Next(-600, -50);
             int randX = random.Next(0, 750);
-            if (asteroidList.Count() < 5)
+            if (asteroidList.Count() < Global.numOfAsteroid)
             {
                 asteroidList.Add(new Asteroid(Content.Load<Texture2D>("asteroid"), new Vector2(randX, randY)));
             }
@@ -815,13 +868,39 @@ namespace Space_Shooter
             }
         }
 
+        public void LoadEmergency()
+        {
+            int randY = random.Next(-600, -50);
+            int randX = random.Next(0, 750);
+            int a4 = random.Next(1, 200);
+            //if (emergencyList.Count() < 1)
+
+            if (a4 == 50)
+            {
+                
+                emergencyList.Add(new Emergency(Content.Load<Texture2D>("red_heart"), new Vector2(randX, randY)));
+            }
+            for (int i = 0; i < emergencyList.Count; i++)
+            {
+               
+                if (!emergencyList[i].isVisible)
+                {
+                    emergencyList.RemoveAt(i);
+                    i--;
+                }
+            }
+            if(emergencyList.Count>1)
+            {
+                emergencyList.RemoveAt(1);
+            }
+        }
         public void LoadEnemies()
         {
             int randY = random.Next(-600, -50);
             int randX = random.Next(0,750);
 
             //if there are less than 3 enemies on the screen, then create more until there is 3 again
-            if(enemyList.Count()<3){
+            if(enemyList.Count()<Global.numOfEnemy){
                 enemyList.Add(new Enemy(Content.Load<Texture2D>("enemyship"),new Vector2(randX, randY), Content.Load<Texture2D>("EnemyBullet")));
             }
             for(int i=0; i<enemyList.Count; i++)
@@ -853,6 +932,32 @@ namespace Space_Shooter
                 pos.Y >= r.Y && pos.Y <= r.Y + textture.Height)
                 return true;
             return false;
+        }
+        public void UpdateManChoi()
+        {
+            if (Global.levelOfPlayer1 == 1 || Global.levelOfPlayer2 == 1)
+            {
+                Global.numOfAsteroid = 6;
+                Global.speedOfAsteroid = 5;
+                Global.numOfEnemy = 4;
+                Global.speedOfEnemy = 4;
+            }
+            if (Global.levelOfPlayer1 == 2 || Global.levelOfPlayer2 == 2)
+            {
+                Global.numOfAsteroid = 7;
+                Global.speedOfAsteroid = 5;
+                Global.numOfEnemy = 4;
+                Global.speedOfEnemy = 6;
+            }
+
+
+            if (Global.levelOfPlayer1 == 3 || Global.levelOfPlayer2 == 3)
+            {
+                Global.numOfAsteroid = 7;
+                Global.speedOfAsteroid = 5;
+                Global.numOfEnemy = 12;
+                Global.speedOfEnemy = 10;
+            }
         }
     }
 }
