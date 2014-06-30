@@ -19,6 +19,7 @@ namespace Space_Shooter
         
         public static int numOfEnemy=3;
         public static int speedOfEnemy=3;
+        public static int speedOfBullet = 5;
 
         public static Texture2D Screen = null;
 

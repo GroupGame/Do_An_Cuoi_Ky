@@ -8,16 +8,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Space_Shooter.Bullet" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAAAAgAAABAAIAAAAAAAAwAgAAAAAAAAAAA=</HashCode>
       <FileName>Bullet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Space_Shooter.Enemy" Collapsed="true">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="7" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAQAAAAAAAACAgAABBAAIAAAAAAAAwAgAAAAggAAAAg=</HashCode>
+      <HashCode>gAQAAAAAAAACAgAABBAAIAAAAAAAAwAgAAQAggAAAAg=</HashCode>
       <FileName>Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,14 +31,14 @@
   <Class Name="Space_Shooter.Game1" Collapsed="true">
     <Position X="3" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AISAWUgAAIgMA0AAAQIAAAQAAAEAAAkAAEwgQICAAIQ=</HashCode>
+      <HashCode>AKyAeUgAAIgME0AgAQIACAwAEoEAAAkBBEwoQACAAKQ=</HashCode>
       <FileName>Game1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Space_Shooter.HUD" Collapsed="true">
-    <Position X="4.75" Y="1.5" Width="1.5" />
+    <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAABAAgCAAAAAAAAAQAAAAAAAAAAAwAAAAEQ=</HashCode>
+      <HashCode>BAQAAAQAAABAAgCAAAAAQAAAQAAAAACAAAAAwAAAAEQ=</HashCode>
       <FileName>HUD.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
   <Class Name="Space_Shooter.SoundManager" Collapsed="true">
     <Position X="3" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAAAAACAAAAAAAAEAAAAAAAAAAAAAQ=</HashCode>
       <FileName>SoundManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -101,23 +101,37 @@
   <Class Name="Space_Shooter.Player" Collapsed="true">
     <Position X="2" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAGDgAAAAAAIAABAAAgAwAgABAAggAAAAw=</HashCode>
+      <HashCode>AAUAAAAAAAAGDgAAAAAIIAABAAEgAwAgABAAggAAAAw=</HashCode>
       <FileName>Player.cs</FileName>
       <NewMemberFileName>Player1.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Space_Shooter.Player1">
+  <Class Name="Space_Shooter.Player1" Collapsed="true">
     <Position X="3.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Player1.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Space_Shooter.Player2">
+  <Class Name="Space_Shooter.Player2" Collapsed="true">
     <Position X="0.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Player2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Space_Shooter.Emergency" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQACAIAAAAQAgAAABAAIAAAAAAAAwAgAAQAAAAAAAQ=</HashCode>
+      <FileName>Emergency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Space_Shooter.EnemyBoss">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAAAAACAgAABBAAIAAAAAAAAwAgAAQAggAAAAg=</HashCode>
+      <FileName>EnemyBoss.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

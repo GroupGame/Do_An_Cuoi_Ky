@@ -19,7 +19,7 @@ namespace Space_Shooter
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Random random= new Random();
+        public static Random random= new Random();
         Player p = new Player1();
         Player p2 = new Player2();
         Starfield sf = new Starfield();
@@ -33,15 +33,13 @@ namespace Space_Shooter
         List<Emergency> emergencyList = new List<Emergency>();
         List<Explosion> explosionList = new List<Explosion>();
         List<Enemy> enemyList = new List<Enemy>();
-        List<Enemy> enemyList2 = new List<Enemy>();
 
+        EnemyBoss enb = new EnemyBoss();
         public Texture2D menuImage;
         public Texture2D gameOver;
 
         public bool twoPlayer = false;
 
-        public Texture2D singlePlayer;
-        public Texture2D multiPlayer;
         public Texture2D AboutScreen;
         public Texture2D Help;
         public Texture2D Option;
@@ -50,7 +48,6 @@ namespace Space_Shooter
         public Texture2D easy;
         public Texture2D normal;
         public Texture2D hard;
-
         List<My2DSprite> sprites = new List<My2DSprite>();
         List<My2DSprite> btBack = new List<My2DSprite>();
         List<Texture2D> On_Off_Sound = new List<Texture2D>();
@@ -111,12 +108,15 @@ namespace Space_Shooter
             p2.LoadContent(Content);
             sf.LoadContent(Content);
             sm.LoadContent(Content);
+            MediaPlayer.Play(sm.bgMusic);
+
             menuImage = Content.Load<Texture2D>("MenuBackground");
-            singlePlayer = Content.Load<Texture2D>("SinglePlayer");
-            multiPlayer = Content.Load<Texture2D>("MultiPlayer");
             Help = Content.Load<Texture2D>("HelpScreen");
             AboutScreen = Content.Load<Texture2D>("AboutScreen");
             gameOver = Content.Load<Texture2D>("GameOver");
+
+            enb.LoadContent(Content);
+
 
             Option = Content.Load<Texture2D>("OptionScreen");
             On_Sound = Content.Load<Texture2D>("On");
@@ -209,6 +209,7 @@ namespace Space_Shooter
                     switch (idx)
                     {
                         case 0:
+                           
                             gameState = State.Single;
                             sprites.Clear();
                             break;
@@ -283,143 +284,191 @@ namespace Space_Shooter
                 Global.twoPlayer = true;
             }
             else
+            {
+                this.IsMouseVisible = true;
                 Global.twoPlayer = false;
+            }
+                
             //upadating playing state
             switch (gameState)
             {
                 case State.Menu:
-                        //CreateMenu();
-                        if (keyState.IsKeyDown(Keys.Space))
-                        {
-                            gameState = State.Single;
-                            MediaPlayer.Play(sm.bgMusic);
-                        }
-                        sf.Update(gameTime);
-                        sf.speed = 1;
-                        break;
+                    p.health = 200;
+                    p2.health = 200;
+                    hud.playerScore = 0;
+                    hud2.playerScore = 0;
+                    p.level = 0;
+                    p2.level = 0;
+                    p.live = 3;
+                    p2.live = 3;
+                    //CreateMenu();
+                    if (keyState.IsKeyDown(Keys.Space))
+                    {
+                        gameState = State.Single;
+                        MediaPlayer.Play(sm.bgMusic);
+                    }
+                    sf.Update(gameTime);
+                    sf.speed = 1;
+                           
+                    break;
 
                 case State.Single:
-                        sf.speed = 2;
-                       
-                        #region Player
-                        //updating enemy's and checking collision of enemyship to player ship
-                        foreach (Enemy e in enemyList)
+                    sf.speed = 2;
+                    
+                    if(p.score >=400 && p.score <=500)
+                    {
+                        if (enb.boundingBox.Intersects(p.boundingBox))
                         {
-                            //check if enemyship is colliding with player
-                            if (e.boundingBox.Intersects(p.boundingBox))
+                            p.health -= 5;
+                            sm.explodeSound.Play();
+                        }
+                        for (int i = 0; i < enb.bulletList.Count; i++)
+                        {
+                            if (p.boundingBox.Intersects(enb.bulletList[i].boundingBox))
                             {
-                                p.health -= 40;
+                                p.health -= enemyBulletDamage;
+                                sm.explodeSound.Play();
+                                enb.bulletList[i].isVisible = false;
+                            }
+                        }
+                        //check player bullet collision to enemyshio
+                        for (int i = 0; i < p.bulletList.Count; i++)
+                        {
+                            if (p.bulletList[i].boundingBox.Intersects(enb.boundingBox))
+                            {
+                                sm.explodeSound.Play();
+                                p.bulletList[i].isVisible = false;
+                                enb.health -= 40;
+
+                            }
+                        }
+                        if (enb.health <= 0)
+                            enb.isVisible = false;
+                    }
+
+
+                    enb.Update(gameTime);
+                    
+                    
+                    #region Player
+                    //updating enemy's and checking collision of enemyship to player ship
+                    foreach (Enemy e in enemyList)
+                    {
+                        //check if enemyship is colliding with player
+                        if (e.boundingBox.Intersects(p.boundingBox))
+                        {
+                            p.health -= 40;
+                            sm.explodeSound.Play();
+                            explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(e.position.X, e.position.Y)));
+                            e.isVisible = false;
+                        }
+
+                        // check enemy bullet collision with player ship 
+                        for (int i = 0; i < e.bulletList.Count; i++)
+                        {
+                            if (p.boundingBox.Intersects(e.bulletList[i].boundingBox))
+                            {
+                                p.health -= enemyBulletDamage;
+                                sm.explodeSound.Play();
+                                e.bulletList[i].isVisible = false;
+                            }
+                        }
+                        //check player bullet collision to enemyshio
+                        for (int i = 0; i < p.bulletList.Count; i++)
+                        {
+                            if (p.bulletList[i].boundingBox.Intersects(e.boundingBox))
+                            {
                                 sm.explodeSound.Play();
                                 explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(e.position.X, e.position.Y)));
+                                p.score += 20;
+                                p.bulletList[i].isVisible = false;
                                 e.isVisible = false;
-                            }
 
-                            // check enemy bullet collision with player ship 
-                            for (int i = 0; i < e.bulletList.Count; i++)
-                            {
-                                if (p.boundingBox.Intersects(e.bulletList[i].boundingBox))
-                                {
-                                    p.health -= enemyBulletDamage;
-                                    sm.explodeSound.Play();
-                                    e.bulletList[i].isVisible = false;
-                                }
                             }
-                            //check player bullet collision to enemyshio
-                            for (int i = 0; i < p.bulletList.Count; i++)
-                            {
-                                if (p.bulletList[i].boundingBox.Intersects(e.boundingBox))
-                                {
-                                    sm.explodeSound.Play();
-                                    explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(e.position.X, e.position.Y)));
-                                    p.score += 20;
-                                    p.bulletList[i].isVisible = false;
-                                    e.isVisible = false;
+                        }
+                        e.Update(gameTime);
+                    }
 
-                                }
-                            }
-                            e.Update(gameTime);
+                    foreach (Emergency em in emergencyList)
+                    {
+                        if (em.boundingBox.Intersects(p.boundingBox))
+                        {
+                            sm.explodeSound.Play();
+                            if (p.health <= (200 - 20))
+                                p.health += 20;
+                            em.isVisible = false;
+
                         }
 
-                        foreach (Emergency em in emergencyList)
+                        // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
+                        em.Update(gameTime);
+                    }
+
+                    foreach (Explosion ex in explosionList)
+                    {
+                        ex.Update(gameTime);
+                    }
+
+                    foreach (Asteroid a in asteroidList)
+                    {
+                        //check to see if any of the asteroid are collingding with our playership, if they are... set issvisible to flase(remove them from asretorid list)
+                        if (a.boundingBox.Intersects(p.boundingBox))
                         {
-                            if (em.boundingBox.Intersects(p.boundingBox))
-                            {
-                                sm.explodeSound.Play();
-                                if (p.health <= (200 - 20))
-                                    p.health += 20;
-                                em.isVisible = false;
+                            sm.explodeSound.Play();
+                            explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(a.position.X, a.position.Y)));
+                            p.health -= 20;
+                            a.isVisible = false;
 
-                            }
-
-                            // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
-                            em.Update(gameTime);
                         }
 
-                        foreach (Explosion ex in explosionList)
+                        // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
+                        for (int i = 0; i < p.bulletList.Count; i++)
                         {
-                            ex.Update(gameTime);
-                        }
-
-                        foreach (Asteroid a in asteroidList)
-                        {
-                            //check to see if any of the asteroid are collingding with our playership, if they are... set issvisible to flase(remove them from asretorid list)
-                            if (a.boundingBox.Intersects(p.boundingBox))
+                            if (a.boundingBox.Intersects(p.bulletList[i].boundingBox))
                             {
                                 sm.explodeSound.Play();
                                 explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(a.position.X, a.position.Y)));
-                                p.health -= 20;
+                                p.score += 5;
                                 a.isVisible = false;
-
+                                p.bulletList.ElementAt(i).isVisible = false;
                             }
-
-                            // interate through our bulletlist if any asteroid come in contact with these bulllets, destroy bullet and asteroid
-                            for (int i = 0; i < p.bulletList.Count; i++)
-                            {
-                                if (a.boundingBox.Intersects(p.bulletList[i].boundingBox))
-                                {
-                                    sm.explodeSound.Play();
-                                    explosionList.Add(new Explosion(Content.Load<Texture2D>("explosion3"), new Vector2(a.position.X, a.position.Y)));
-                                    p.score += 5;
-                                    a.isVisible = false;
-                                    p.bulletList.ElementAt(i).isVisible = false;
-                                }
-                            }
-
-                            a.Update(gameTime);
                         }
 
-                        //hud.Update(gameTime);
+                        a.Update(gameTime);
+                    }
 
-                        // if health <=0 go to game over
+                    //hud.Update(gameTime);
 
-                        Global.levelOfPlayer1 = p.level;
-                        hud.playerLive = p.live;
-                        hud.playerScore = p.score;
-                        hud.playerLevel = p.level;
-                        p.Update(gameTime);
-                        sf.Update(gameTime);
-                        ManageExposion();
+                    // if health <=0 go to game over
 
-                        LoadAsteroids();
-                        LoadEmergency();
+                    Global.levelOfPlayer1 = p.level;
+                    hud.playerLive = p.live;
+                    hud.playerScore = p.score;
+                    hud.playerLevel = p.level;
+                    p.Update(gameTime);
+                    sf.Update(gameTime);
+                    ManageExposion();
 
-                        LoadEnemies();
-                        if (p.health <= 0)
-                        {
-                            p.live = p.live - 1;
+                    LoadAsteroids();
+                    LoadEmergency();
 
-                            if (p.health <= 0 && p.live <= 0)
-                                gameState = State.GameOver;
-                            p.health = 200;
-                        }
-                        #endregion
-                        if (keyState.IsKeyDown(Keys.Escape))
-                        {
-                            CreateMenu();
-                            gameState = State.Menu;
-                        }
+                    LoadEnemies();
+                    if (p.health <= 0)
+                    {
+                        p.live = p.live - 1;
+
+                        if (p.health <= 0 && p.live <= 0)
+                            gameState = State.GameOver;
+                        p.health = 200;
+                    }
+                    #endregion
+                    if (keyState.IsKeyDown(Keys.Escape))
+                    {
+                        CreateMenu();
+                        gameState = State.Menu;
+                    }
                             
-                        break;
+                    break;
                
                 case State.Multi:
                         sf.speed = 2;
@@ -652,6 +701,8 @@ namespace Space_Shooter
                             p2.health = 200;
                             hud.playerScore = 0;
                             hud2.playerScore = 0;
+                            p.level = 0;
+                            p2.level = 0;
                             p.live = 3;
                             p2.live = 3;
                         }
@@ -675,8 +726,8 @@ namespace Space_Shooter
                 case StateLevel.Normal:
                     foreach (Enemy e in enemyList)
                     {
-                        e.speed = 10;
-                        e.nBullet = 40;
+                        e.speed = 7;
+                        e.nBullet = 30;
                     }
                     foreach (Asteroid a in asteroidList)
                         a.speed = 10;
@@ -684,8 +735,8 @@ namespace Space_Shooter
                 case StateLevel.Hard:
                     foreach (Enemy e in enemyList)
                     {
-                        e.speed = 15;
-                        e.nBullet = 40;
+                        e.speed = 8;
+                        e.nBullet = 35;
                     }
                     foreach (Asteroid a in asteroidList)
                         a.speed = 14;
@@ -743,6 +794,12 @@ namespace Space_Shooter
                     {
                         e.Draw(spriteBatch);
                     }
+                    if (p.score >= 400 && p.score <= 500 && enb.isVisible ==true)
+                       
+                            enb.Draw(spriteBatch);
+
+
+
                     hud.Draw(spriteBatch);
                     break;
                 case State.Multi:
@@ -898,10 +955,14 @@ namespace Space_Shooter
         {
             int randY = random.Next(-600, -50);
             int randX = random.Next(0,750);
-
+            int a = random.Next(1, 5);
             //if there are less than 3 enemies on the screen, then create more until there is 3 again
             if(enemyList.Count()<Global.numOfEnemy){
-                enemyList.Add(new Enemy(Content.Load<Texture2D>("enemyship"),new Vector2(randX, randY), Content.Load<Texture2D>("EnemyBullet")));
+                if(a==3)
+                    enemyList.Add(new Enemy(Content.Load<Texture2D>("enemyship"), new Vector2(randX, randY), Content.Load<Texture2D>("EnemyBullet")));
+                if(a==4)
+                    enemyList.Add(new Enemy(Content.Load<Texture2D>("starshipdark"), new Vector2(randX, randY), Content.Load<Texture2D>("torpedodark")));
+
             }
             for(int i=0; i<enemyList.Count; i++)
             {
@@ -912,7 +973,7 @@ namespace Space_Shooter
                 }
             }
         }
-
+       
         //manage explosions
         public void ManageExposion()
         {

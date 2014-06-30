@@ -36,8 +36,8 @@ namespace Space_Shooter
             health = 200;
             live = 3;
             healthBarPosition = new Vector2(50, 50);
-            score =0;
-            level =3;
+            score =395;
+            level =0;
 
         }
 

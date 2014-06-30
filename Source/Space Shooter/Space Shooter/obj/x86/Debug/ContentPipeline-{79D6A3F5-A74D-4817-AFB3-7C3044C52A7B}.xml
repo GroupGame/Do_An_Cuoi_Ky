@@ -354,6 +354,33 @@
       <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\torpedo.xnb</Output>
       <Time>2014-06-29T22:03:58.0025793+07:00</Time>
     </Item>
+    <Item>
+      <Source>starshipdark.png</Source>
+      <Name>starshipdark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\starshipdark.xnb</Output>
+      <Time>2014-06-30T08:54:43.6829608+07:00</Time>
+    </Item>
+    <Item>
+      <Source>torpedodark.png</Source>
+      <Name>torpedodark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\torpedodark.xnb</Output>
+      <Time>2014-06-30T08:57:12.1132728+07:00</Time>
+    </Item>
+    <Item>
+      <Source>boss.png</Source>
+      <Name>boss</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\LEARN\HK6\Lap Trinh Game\Do An\Do An Cuoi Ky\source\Source\Space Shooter\Space Shooter\bin\x86\Debug\Content\boss.xnb</Output>
+      <Time>2014-06-30T10:18:12.6911613+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{79D6A3F5-A74D-4817-AFB3-7C3044C52A7B}</ContentProjectGUID>
